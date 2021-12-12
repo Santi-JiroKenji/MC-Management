@@ -1,0 +1,14 @@
+
+    <div class="sumcard-in-summary sumcard" [ngClass]="{'success-color': color === 'success', 'danger-color': color === 'danger'}">
+        <div class="card-body d-flex flex-nowrap justify-content-lg-between">
+            <span class="card-title">
+                {{ topic ? topic : '-' }}
+            </span>
+            
+            <span class="card-subtitle" [ngClass]="{'success-color': color === 'success', 'danger-color': color === 'danger'}">
+                {{ detail ? detail : '-' }}
+            </span>
+        </div>
+    </div>
+
+

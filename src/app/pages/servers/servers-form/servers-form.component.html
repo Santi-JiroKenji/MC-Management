@@ -1,0 +1,146 @@
+<div class="server-form-add">
+    <div class="card-header">
+        <span class="title-header">Add Server Information</span>
+    </div>
+    <div class="card-body">
+
+      <div class="row form-input-group">
+        <form>
+            
+          <div class="row form-row">
+            <div class="form-group col col-lg-6 server-name">
+              <label for="inputServerName">Server Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputServerName"
+                [value]="data?.serverName ? data?.serverName : null"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group col col-lg-6 cpu-percent">
+              <label for="inputCpuPercent">CPU Percent</label>
+              <input
+                type="text"
+                class="form-control"
+                [value]="data?.cpuPer ? data?.cpuPer : null"
+                id="inputCpuPercent"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="row form-row">
+            <div class="form-group col col-lg-6 memory">
+              <label for="inputMemory">Memory</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputMemory"
+                [value]="data?.memory ? data?.memory : null"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group col col-lg-6 disk">
+                <label for="inputDisk">Disk</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputDisk"
+                  [value]="data?.disk ? data?.disk : null"
+                  placeholder=""
+                />
+              </div>
+          </div>
+          <div class="row form-row">
+            <div class="form-group col col-lg-6 status">
+              <label for="inputStatus">Status</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputStatus"
+                [value]="data?.status ? data?.status : null"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group col col-lg-6 end-point">
+              <label for="inputEndPoint">End Point</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputEndPoint"
+                [value]="data?.endPoint ? data?.endPoint : null"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="row form-row">
+            <div class="form-group col col-lg-6 cpu">
+              <label for="inputCpu">CPU</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputCpu"
+                [value]="data?.cpu ? data?.cpu : null"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group col col-lg-6 ram">
+              <label for="inputRam">RAM</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputRam"
+                [value]="data?.ram ? data?.ram : null"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="row form-row">
+            <div class="form-group col col-lg-6 ssd">
+              <label for="inputSsd">SSD</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputSsd"
+                [value]="data?.ssd ? data?.ssd : null"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group col col-lg-6 provider">
+              <label for="inputProvider">Provider</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputProvider"
+                [value]="data?.provider ? data?.provider : null"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="row form-row">
+            <div class="form-group col col-lg-12 detail">
+              <label for="inputDetail">Detail</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputDetail"
+                [value]="data?.detail ? data?.detail : null"
+                placeholder=""
+              />
+            </div>
+          </div>
+          
+          <div class="row form-row end-button-group">
+            <div class="form-group col col-lg-6 submit-button">
+              <button class="btn btn-primary" type="submit" style="float: right">
+                submit
+              </button>
+            </div>
+            <div class="form-group col col-lg-6 reset-button">
+              <button class="btn btn-primary" type="reset">cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

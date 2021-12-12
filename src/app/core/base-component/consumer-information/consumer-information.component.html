@@ -1,0 +1,70 @@
+<div class="row con-infor-dialog">
+    <div class="col col-lg-4">
+        <div class="logo-consumer">
+            <img src={{data?.logo}} alt="" class="rounded-circle">
+        </div>
+    </div>
+
+    <div class="col col-lg-8 consumer-detail">
+        <div class="row consumer-name">
+            <div class="col col-lg-12">
+                <label>{{data?.consumerName ? data?.consumerName : '-'}}</label>
+            </div>
+        </div>
+
+        <div class="row tel-number">
+            <div class="col col-lg-4 tel-number-title">
+                <label>Contact Number</label>
+            </div>
+            <div class="col col-lg-8 tel-number-subject">
+                <label>{{data?.contact ? data?.contact : '-'}}</label>
+            </div>
+        </div>
+
+        <div class="row email">
+            <div class="col col-lg-4 email-title">
+                <label>E-mail</label>
+            </div>
+            <div class="col col-lg-8 email-subject">
+                <label>{{data?.email ? data?.email : '-'}}</label>
+            </div>
+        </div>
+
+        <div class="row car-value">
+            <div class="col col-lg-4 car-value-title">
+                <label>Car Value</label>
+            </div>
+            <div class="col col-lg-8 car-value-subject">
+                <label>{{data?.carValue ? data?.carValue : '-'}} cars</label>
+            </div>
+        </div>
+
+        <div class="row user-value">
+            <div class="col col-lg-4 user-value-title">
+                <label>User Value</label>
+            </div>
+            <div class="col col-lg-8 user-value-subject">
+                <label>{{data?.userValue ? data?.userValue : '-'}} users</label>
+            </div>
+        </div>
+
+        <div class="row address">
+            <div class="col col-lg-4 address-title">
+                <label>Address</label>
+            </div>
+            <div class="col col-lg-8 address-subject">
+                <label>{{data?.address ? data?.address : '-'}}</label>
+            </div>
+        </div>
+
+        <div class="row detail">
+            <div class="col col-lg-4 detail-title">
+                <label>Detail</label>
+            </div>
+            <div class="col col-lg-8 detail-subject">
+                <label>{{data?.detail ? data?.detail : '-'}}</label>
+            </div>
+        </div>
+    </div>
+
+</div>

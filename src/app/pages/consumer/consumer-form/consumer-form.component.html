@@ -1,0 +1,207 @@
+<div class="consumer-form-add">
+  <div class="card-header">
+    <span class="title-header">Add Consumer Information</span>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col col-lg-12 profile-consumer">
+        <img
+          [src]="data?.logo != null ? data?.logo : userImageUrl"
+          alt=""
+          class="rounded-circle"
+        />
+        <button type="button" class="btn change-profile-button">
+          <i class="bx bxs-camera-plus"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row form-input-group">
+      <form>
+        <div class="row form-row">
+          <div class="form-group col col-lg-6 consumer-name">
+            <label for="inputConsumerName">Consumer Name</label>
+            <input
+              type="name"
+              class="form-control"
+              id="inputConsumerName"
+              [value]="data?.consumerName ? data?.consumerName : null"
+              placeholder=""
+            />
+          </div>
+          <div class="form-group col col-lg-6 tel-number">
+            <label for="inputTelnum">Tel Number</label>
+            <input
+              type="tel"
+              class="form-control"
+              [value]="data?.contact ? data?.contact : null"
+              id="inputTelnum"
+              placeholder=""
+            />
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="form-group col col-lg-12 address">
+            <label for="inputAddress">Address</label>
+            <input
+              type="address"
+              class="form-control"
+              id="inputAddress"
+              [value]="data?.address ? data?.address : null"
+              placeholder=""
+            />
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="form-group col col-lg-6 email">
+            <label for="inputEmail">E-mail</label>
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail"
+              [value]="data?.email ? data?.email : null"
+              placeholder=""
+            />
+          </div>
+          <div class="form-group col col-lg-6 detail">
+            <label for="inputDetail">Detail</label>
+            <input
+              type="detail"
+              class="form-control"
+              id="inputDetail"
+              [value]="data?.detail ? data?.detail : null"
+              placeholder=""
+            />
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="form-group col col-lg-12 server-info">
+            <label for="serverInfo">Server Information</label>
+            <span style="float: right">
+              <button
+                class="btn"
+                type="button"
+                (click)="onClickViewSelectServer()"
+              >
+                + Servers
+              </button>
+            </span>
+            <table class="table table-borderless my-3" id="serverInfo">
+              <thead>
+                <tr>
+                  <th scope="col">Size</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">End Point</th>
+                  <th scope="col">Provider</th>
+                  <th scope="col">CPU</th>
+                  <th scope="col">RAM</th>
+                  <th scope="col">SSD</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="first-data-on-table">
+                    {{
+                      data?.server?.serverName ? data?.server?.serverName : "-"
+                    }}
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn"
+                      disabled
+                      [ngClass]="{
+                        'success-color': data?.server?.status === 'Enable',
+                        'danger-color': data?.server?.status === 'Disable'
+                      }"
+                    >
+                      {{ data?.server.status ? data?.server.status : "-" }}
+                    </button>
+                  </td>
+                  <td>
+                    {{ data?.server?.endPoint ? data?.server?.endPoint : "-" }}
+                  </td>
+                  <td>
+                    {{ data?.server?.provider ? data?.server?.provider : "-" }}
+                  </td>
+                  <td>{{ data?.server?.cpu ? data?.server?.cpu : "-" }}</td>
+                  <td>{{ data?.server?.ram ? data?.server?.ram : "-" }}</td>
+                  <td>{{ data?.server?.ssd ? data?.server?.ssd : "-" }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="form-group col col-lg-12 package-info">
+            <label for="packageInfo">Package Information</label>
+            <span style="float: right">
+              <button
+                class="btn"
+                type="button"
+                (click)="onClickViewSelectPackage()"
+              >
+                + Packages
+              </button>
+            </span>
+            <table class="table table-borderless my-3" id="packageInfo">
+              <thead>
+                <tr>
+                  <th scope="col">Package</th>
+                  <th scope="col">System</th>
+                  <th scope="col">Car Value</th>
+                  <th scope="col">User Value</th>
+                  <th scope="col">Server</th>
+                  <th scope="col">Backup</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="first-data-on-table">
+                    {{
+                      data?.package?.packageName
+                        ? data?.package?.packageName
+                        : "-"
+                    }}
+                  </td>
+                  <td>
+                    {{ data?.package?.system ? data?.package?.system : "-" }}
+                  </td>
+                  <td>
+                    {{
+                      data?.package?.carValue ? data?.package?.carValue : "-"
+                    }}
+                  </td>
+                  <td>
+                    {{
+                      data?.package?.userValue ? data?.package?.userValue : "-"
+                    }}
+                  </td>
+                  <td>
+                    {{
+                      data?.package?.serverType
+                        ? data?.package?.serverType
+                        : "-"
+                    }}
+                  </td>
+                  <td>
+                    {{ data?.package?.backup ? data?.package?.backup : "-" }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row form-row end-button-group">
+          <div class="form-group col col-lg-6 submit-button">
+            <button class="btn btn-primary" type="submit" style="float: right">
+              submit
+            </button>
+          </div>
+          <div class="form-group col col-lg-6 reset-button">
+            <button class="btn btn-primary" type="reset">cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

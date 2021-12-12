@@ -1,0 +1,33 @@
+<div class="server-data-box-table">
+    <table class="table table-borderless my-3" id="serverInfo">
+        <thead>
+            <tr>
+                <th>Size</th>
+                <th>Status</th>
+                <th>End Point</th>
+                <th>Provider</th>
+                <th>CPU</th>
+                <th>RAM</th>
+                <th>SSD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="first-data-in-table">
+                    {{data?.serverName}}
+                </td>
+                <td>
+                    <button type="button" class="btn"
+                        [ngClass]="{'success-color': dataCon?.color === 'success', 'danger-color': dataCon?.color === 'danger'}"
+                        disabled
+                    >{{data?.status}}</button>
+                </td>
+                <td>{{data?.endPoint}}</td>
+                <td>{{data?.provider}}</td>
+                <td>{{data?.cpu}}</td>
+                <td>{{data?.ram}}</td>
+                <td>{{data?.ssd}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

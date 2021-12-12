@@ -1,0 +1,149 @@
+.package-select-dialog {
+    width: 100%;
+    height: auto;
+    background: var(--white-color);
+}
+
+.package-select-dialog .card-body {
+    width: 100%;
+}
+
+.package-select-dialog .card-header{
+    background: var(--primary-color);
+    padding: 1rem 1rem;
+}
+
+.package-select-dialog .card-header .title-header {
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.package-select-dialog .card-body .filter-label {
+    padding-bottom: 0.5rem;
+}
+
+.package-select-dialog .card-body .filter-label label {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.package-select-dialog .card-body .filter-label span {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.package-select-dialog .filter-search-input .nav-list {
+    height: 50px;
+}
+
+.package-select-dialog .filter-search-input .nav-list .subject {
+    position: relative;
+    list-style: none;
+}
+
+.package-select-dialog .filter-search-input input {
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    padding-left: 5.5rem;
+    background: inherit;
+    border: var(--border-color) solid 1px;
+    border-radius: 5px;
+}
+
+.package-select-dialog .filter-search-input .bx-search {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: var(--white-color);
+    padding: 0 1.1rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.1rem;
+    background: var(--icon-color);
+    border-radius: 5px 0 0 5px;
+    border: var(--icon-color) solid 1px;
+}
+
+.package-select-dialog .filter-search-button .search-button {
+    background: var(--icon-color);
+    color: var(--white-color);
+    padding: 0.74rem 2.5rem;
+    border: var(--border-color) solid 1px;
+}
+
+.package-select-dialog .package-info {
+    padding-top: 0.5rem;
+}
+
+.package-select-dialog .package-info table {
+    width: 100%;
+}
+
+.package-select-dialog .package-info table th,
+.package-select-dialog .package-info table td {
+    width: 17.5%;
+}
+
+.package-select-dialog .package-info td.mat-cell,
+.package-select-dialog .package-info th.mat-header-cell {
+    border-bottom-style: none;
+}
+
+.package-select-dialog .package-info table th {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--title-color);
+}
+
+.package-select-dialog .package-info table td {
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 1rem;
+}
+
+.package-select-dialog .package-info td span button {
+    background: var(--white-color);
+    width: 100px;
+    height: 33px;
+    color: var(--border-color);
+    border: var(--border-color) solid 2px;
+}
+
+.package-select-dialog .package-info td span button.success-color {
+    border: var(--success-color) solid 2px;
+    color: var(--success-color);
+}
+
+.package-select-dialog .package-info td span button.danger-color {
+    border: var(--danger-color) solid 2px;
+    color: var(--danger-color);
+}
+
+.package-select-dialog .package-info td span button p {
+    margin-top: -2px;
+    margin-left: -5px;
+}
+
+.package-select-dialog .package-info td button {
+    background: var(--success-color);
+    padding: 0.5rem 2rem;
+    color: #fff;
+    font-size: 14px;
+}
+
+.package-select-dialog .package-info .first-data-on-table {
+    color: var(--info-color);
+    font-weight: 500;
+}
+
+.package-select-dialog .package-info mat-paginator {
+    padding-top: 1rem;
+    font-size: 14px;
+    color: var(--title-color);
+}
+

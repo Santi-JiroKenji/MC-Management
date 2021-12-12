@@ -1,0 +1,90 @@
+<div class="provider-form-add">
+  <div class="card-header">
+    <span class="title-header">Add Provider Information</span>
+  </div>
+  <div class="card-body">
+    <div class="row">
+        <div class="col col-lg-12 profile-provider">
+          <img
+            [src]="data?.logo_provider != null ? data?.logo_provider : userImageUrl"
+            alt=""
+            class="rounded-circle"
+          />
+          <button type="button" class="btn change-profile-button">
+            <i class="bx bxs-camera-plus"></i>
+          </button>
+        </div>
+      </div>
+    <div class="row form-input-group">
+      <form>
+        <div class="row form-row">
+          <div class="form-group col col-lg-6 provider-name">
+            <label for="inputProviderName">Provider Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputProviderName"
+              [value]="data?.providerName ? data?.providerName : null"
+              placeholder=""
+            />
+          </div>
+          <div class="form-group col col-lg-6 logo-provider">
+            <label for="inputLogoProvider">Logo Provider URL</label>
+            <input
+              type="text"
+              class="form-control"
+              [value]="data?.logo_provider ? data?.logo_provider : null"
+              id="inputLogoProvider"
+              placeholder=""
+            />
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="form-group col col-lg-6 TelNumber">
+            <label for="inputTelNumber">Tel Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputTelNumber"
+              [value]="data?.telNumber ? data?.telNumber : null"
+              placeholder=""
+            />
+          </div>
+          <div class="form-group col col-lg-6 WebUrl">
+            <label for="inputWebUrl">Web Site</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputWebUrl"
+              [value]="data?.webUrl ? data?.webUrl : null"
+              placeholder=""
+            />
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="form-group col col-lg-12 detail">
+            <label for="inputDetail">Detail</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputDetail"
+              [value]="data?.detail ? data?.detail : null"
+              placeholder=""
+            />
+          </div>
+        </div>
+
+        <div class="row form-row end-button-group">
+          <div class="form-group col col-lg-6 submit-button">
+            <button class="btn btn-primary" type="submit" style="float: right">
+              submit
+            </button>
+          </div>
+          <div class="form-group col col-lg-6 reset-button">
+            <button class="btn btn-primary" type="reset">cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

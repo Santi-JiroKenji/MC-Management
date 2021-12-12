@@ -1,0 +1,63 @@
+<section>
+    <div class="row consumer">
+      <div class="col col-lg-4 mb-2">
+        <div class="nav-list">
+          <div class="subject">
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search Consumer. . ." />
+          </div>
+        </div>
+      </div>
+  
+      <div class="col col-lg-4 mb-2">
+          <div class="row">
+              <div class="col col-lg-1"></div>
+              <div class="col col-lg-10">
+                  <div class="sumcard-in-consumer">
+                      <app-summary-card
+                        class="space"
+                        *ngFor="let item of list"
+                        [topic]="item.topic"
+                        [detail]="item.detail"
+                        [color]="item.color"
+                      ></app-summary-card>
+                    </div>
+              </div>
+              <div class="col col-lg-1"></div>
+          </div>
+      </div>
+  
+      <div class="col col-lg-4 mb-2">
+        <div class="button-toggle-list">
+          <ul class="nav-toggle">
+            <li class="subject-toggle">
+              <button type="button" class="btn button-toggle-gl">
+                <i class="bx bx-grid-alt"></i>
+              </button>
+              <button type="button" class="btn button-toggle-gl">
+                <i class="bx bx-list-ul"></i>
+              </button>
+              <button type="button" class="btn button-add-data" (click)="onClickConsumerAdd()">
+                  + Add Data
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <div class="row con-card-in-consumer" *ngIf="displayMode === 1">
+      <app-consumer-card-detail
+        *ngFor="let customer of customerList"
+        [data]="customer"
+        [viewMode]="false"
+        (clickView)="onConsumerCardViewClick($event.id)"
+        (clickEdit)="onClickConsumerEdit($event.id)"
+        class="col col-lg-4"
+      >
+      </app-consumer-card-detail>
+    </div>
+  </section>
+  

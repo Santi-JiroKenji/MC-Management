@@ -1,0 +1,118 @@
+<div class="con-card-in-detail">
+    <div class="card-body">
+        <div class="row">
+            <div class="col col-lg-3 profile-consumer">           
+                <img src={{data?.logo}} alt="" class="rounded-circle"
+                    [ngClass]="{'success-color': data?.color === 'success', 'danger-color': data?.color === 'danger'}"
+                >
+            </div>
+
+            <div class="col col-lg-7 consumer-label-group-first">
+                <div class="row">
+                    <div class="consumer-name-label">
+                        {{ data?.consumerName ? data?.consumerName : '-'}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-number-label">
+                        Contact number:
+                        <span>
+                            {{ data?.contact ? data?.contact : '-'}}
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="status-label">
+                        <button type="button" class="btn"
+                            [ngClass]="{'success-color': data?.color === 'success', 'danger-color': data?.color === 'danger'}"
+                            disabled
+                        >
+                            {{data?.status ? data?.status : '-'}}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-lg-2">
+                <span class="dialog-card-button">
+                    <ul class="ve-button">
+                        <li class="view-button" [ngClass]="{'edit-btn-view': viewMode === true}">
+                            <button class="btn" (click)="onClickView()">
+                                <i class='bx bx-show'></i>
+                            </button>
+                        </li>
+                        <li class="edit-button" *ngIf="!viewMode">
+                            <button class="btn" (click)="onClickEdit()">
+                                <i class='bx bx-edit'></i>
+                            </button>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+        
+        <div class="row">
+            <hr class="col-lg-12 hr-line">
+        </div>
+        <div class="row card-detail-group">
+            <div class="col col-lg-6 detail-title-label-group">
+                <div class="row">
+                    <span class="title-detail">Package</span>
+                </div>
+                <div class="row">
+                    <span class="title-detail">Runtime</span>                    
+                </div>
+                <div class="row">
+                    <span class="title-detail">Server Locate</span>                    
+                </div>
+                <div class="row">
+                    <span class="title-detail">Car value</span>                    
+                </div>
+                <div class="row">
+                    <span class="title-detail">User</span>                    
+                </div>
+                <div class="row">
+                    <span class="title-detail">Expire Date</span>                   
+                </div>
+            </div>
+            
+            <div class="col col-lg-6 detail-subject-label-group">
+                <div class="row">
+                    <span class="subject-detail">
+                        : {{data?.package?.packageName ? data?.package?.packageName : '-'}}
+                    </span>                   
+                </div>
+                <div class="row">
+                    <span class="subject-detail">
+                        : {{data?.runtime ? data?.runtime : '-'}} days
+                    </span>                    
+                </div>
+                <div class="row">
+                    <span class="subject-detail">
+                        : {{data?.server?.serverName ? data?.server?.serverName : '-'}}
+                    </span>                    
+                </div>
+                <div class="row">
+                    <span class="subject-detail">
+                        : {{data?.carValue ? data?.carValue : '-'}} cars
+                    </span>                    
+                </div>
+                <div class="row">
+                    <span class="subject-detail"> 
+                        : {{data?.userValue ? data?.userValue : '-'}} users
+                    </span>                    
+                </div>
+                <div class="row subject-detail">
+                    <span class="exp-date-subject">
+                        : {{data?.expDate ? data?.expDate : '-'}}
+                        <span class="time"
+                        [ngClass]="{'success-color': data?.server?.color === 'success', 'danger-color': data?.server?.color === 'danger'}"
+                        >
+                            ({{data?.timeExp ? data?.timeExp : '-'}} days)
+                        </span>
+                    </span>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

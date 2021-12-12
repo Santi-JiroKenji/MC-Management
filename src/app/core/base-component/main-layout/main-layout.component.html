@@ -1,0 +1,79 @@
+
+  <div class="sidebar" [class.active]="classApplied">
+    <div class="logo-details">
+      <!-- <i class="bx bxl-c-plus-plus icon"></i> -->
+      <img src="./assets/images/logo-short.png" alt="" />
+      <div class="logo_name">
+        MC
+        <span style="font-size: 18px">Management</span>
+      </div>
+      <i class="bx bx-menu" id="btn" (click)="toggleClass()"></i>
+    </div>
+    <ul class="nav-list">
+      <!-- <li>
+        <i class="bx bx-search"></i>
+        <input type="text" placeholder="Search..." />
+        <span class="tooltip">Search</span>
+      </li> -->
+      <li class="subject">
+        <a href="#/monitor" (click)="btnActive(1)" [class.btn-active]="activeButton === 1">
+          <i class="bx bx-desktop"></i>
+          <span class="links_name">Monitor</span>
+        </a>
+        <span class="tooltip">Monitor</span>
+      </li>
+      <li class="subject">
+        <a href="#/consumer" (click)="btnActive(2)" [class.btn-active]="activeButton === 2">
+          <i class="bx bx-user"></i>
+          <span class="links_name">Consumer</span>
+        </a>
+        <span class="tooltip">Consumer</span>
+      </li>
+      <li class="subject">
+        <a href="#/servers" (click)="btnActive(3)" [class.btn-active]="activeButton === 3">
+          <i class="bx bx-server"></i>
+          <span class="links_name">Servers</span>
+        </a>
+        <span class="tooltip">Servers</span>
+      </li>
+      <li class="subject">
+        <a href="#/providers" (click)="btnActive(4)" [class.btn-active]="activeButton === 4">
+          <i class="bx bxs-user-account"></i>
+          <span class="links_name">Providers</span>
+        </a>
+        <span class="tooltip">Providers</span>
+      </li>
+      <li class="subject">
+        <a href="#/packages" (click)="btnActive(5)" [class.btn-active]="activeButton === 5">
+          <i class="bx bx-package"></i>
+          <span class="links_name">Packages</span>
+        </a>
+        <span class="tooltip">Packages</span>
+      </li>
+      <li class="profile">
+        <div class="profile-details">
+          <img src="./assets/images/profile.jpg" alt="profileImg" />
+          <div class="name_job">
+            <div class="name">Sunthi Phankham</div>
+            <div class="job">Admin1</div>
+          </div>
+        </div>
+        <i class="bx bx-log-out" id="log_out"></i>
+      </li>
+    </ul>
+  </div>
+
+<section class="side-content">
+  <!-- <img class="bg-content"
+    src="https://image.freepik.com/free-vector/logistic-workers-delivering-meds-warehouse-employees-loading-truck-with-pills-flat-illustration_74855-14097.jpg" 
+    alt=""
+  > -->
+  <router-outlet class="main-content"></router-outlet>
+</section>
+
+<footer>
+  <img class="footer-bg"
+    src="./assets/images/footer.jpg" 
+    alt=""
+  >
+</footer>

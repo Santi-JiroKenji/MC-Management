@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Prompt', 'sans-serif';
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: linear-gradient(180deg, #090098 0%, var(--primary-color) 30.18%, #090098 100%);
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+.sidebar.active {
+  width: 250px;
+}
+.sidebar .logo-details {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details img {
+  opacity: 0;
+  transition: all 0.5s ease;
+  height: 45px;
+  width: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: var(--white-color);
+  border-radius: 5px;
+  border: var(--white-color) solid 7px;
+}
+.sidebar .logo-details .logo_name {
+  color: var(--white-color);
+  font-size: 22px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+  padding-left: 10px;
+}
+.sidebar.active .logo-details img,
+.sidebar.active .logo-details .logo_name {
+  opacity: 1;
+}
+.sidebar .logo-details #btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.active .logo-details #btn {
+  text-align: right;
+  opacity: 0.5;
+}
+.sidebar i {
+  color: var(--white-color);
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list {
+  padding-top: 1rem;
+  height: 100%;
+}
+
+.sidebar .subject {
+    position: relative;
+    margin: 30px 0;
+    list-style: none
+}
+
+.sidebar li {
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip {
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: var(--white-color);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.active li .tooltip {
+  display: none;
+}
+.sidebar input {
+  font-size: 15px;
+  color: var(--white-color);
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: var(--border-color);
+}
+.sidebar.active input {
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+.sidebar .bx-search {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: var(--border-color);
+  color: #fff;
+}
+.sidebar.active .bx-search:hover {
+  background: var(--border-color);
+  color: var(--white-color);
+}
+.sidebar .bx-search:hover {
+  background: var(--white-color);
+  color: var(--border-color);
+}
+.sidebar li a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  border: var(--border-color) solid 1px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: var(--primary-color);
+}
+
+.sidebar li a:hover {
+  background: var(--white-color);
+}
+.sidebar li a .links_name {
+  color: var(--white-color);
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.active li a .links_name {
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i {
+  transition: all 0.5s ease;
+  color: var(--primary-color);
+}
+.sidebar li i {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile {
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: linear-gradient(90deg, #ac4512 0%, var(--secondary-color) 30.18%, #ac4512 100%);
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.active li.profile {
+  width: 250px;
+}
+.sidebar li .profile-details {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.sidebar li img {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+  opacity: 0;
+  border: var(--success-color) solid 2px;
+  padding: 1px;
+  background: var(--white-color);
+}
+
+.sidebar li.profile .name,
+.sidebar li.profile .job {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--white-color);
+  white-space: nowrap;
+  opacity: 0;
+}
+.sidebar li.profile .job {
+  font-size: 12px;
+}
+.sidebar.active li img,
+.sidebar.active li.profile .name,
+.sidebar.active li.profile .job {
+  opacity: 1;
+}
+.sidebar .profile i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-32%, -50%);
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.sidebar.active .profile #log_out {
+  background: none;
+  opacity: 0.5;
+}
+
+.sidebar .nav-list .btn-active,
+.sidebar .nav-list .btn-active .bx,
+.sidebar .nav-list .btn-active .links_name {
+  background: var(--white-color) !important;
+  color: var(--primary-color) !important;
+}
+
+
+.side-content {
+  position: relative;
+  // background: linear-gradient(180deg, rgb(9, 0, 152, 0.5) 0%, rgb(57, 76, 236, 0.5) 30.18%, rgb(9, 0, 152, 0.5) 100%);
+  // background: #fff;
+  min-height: 100vh;
+  top: 0;
+  left: 95px;
+  width: calc(95% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+
+}
+.sidebar.active ~ .side-content {
+  left: 270px;
+  width: calc(95% - 250px);
+}
+// .side-content .text {
+//   display: inline-block;
+//   color: #11101d;
+//   font-size: 25px;
+//   font-weight: 500;
+//   margin: 18px;
+// }
+
+// .bg-content {
+//   opacity: 0.2;
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+// }
+
+.main-content {
+  position: relative;
+}
+
+.footer-bg {
+  width: 100%;
+  height: stretch;
+  position: fixed;
+  opacity: 0.2;
+  top: 0;
+}
+
+@media (max-width: 420px) {
+  .sidebar li .tooltip {
+    display: none;
+  }
+}

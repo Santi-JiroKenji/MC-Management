@@ -1,0 +1,32 @@
+<div class="detail-con-dialog-card">
+    <div class="card-header">
+        <span>Consumer Detail</span>
+    </div>
+    <div class="card-body">
+        <app-consumer-information [data]="consumer"></app-consumer-information>
+
+        <div class="row">
+            <hr class="col-lg-12 hr-line">
+        </div>
+
+        <div class="row">
+            <div class="col col-lg-12 box-infor">
+                
+                <div class="form-row">
+                    <div class="form-group col col-lg-12 server-info">
+                        <label for="serverInfo" class="server-info-app">Server Information</label>
+                        <app-servers-data [data]="consumer.server" [dataCon]="consumer"></app-servers-data>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group col col-lg-12 package-info">
+                        <label for="packageInfo" class="package-info-app">Package Information</label>
+                        <app-packages-data [data]="consumer.package"></app-packages-data>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>

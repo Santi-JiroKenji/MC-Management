@@ -1,0 +1,156 @@
+<div class="package-form-add">
+    <div class="card-header">
+        <span class="title-header">Add Package Information</span>
+    </div>
+    <div class="card-body">
+
+      <div class="row form-input-group">
+        <form>
+            
+          <div class="row form-row">
+            <div class="form-group col col-lg-6 package-name">
+              <label for="inputPackageName">Package Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputPackageName"
+                [value]="data?.packageName ? data?.packageName : null"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group col col-lg-6 system">
+              <label for="inputSystem">System</label>
+              <input
+                type="text"
+                class="form-control"
+                [value]="data?.system ? data?.system : null"
+                id="inputSystem"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="row form-row">
+            <div class="form-group col col-lg-6 car-value">
+              <label for="inputCarValue">Car Value</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputCarValue"
+                [value]="data?.carValue ? data?.carValue : null"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group col col-lg-6 user-value">
+                <label for="inputUserValue">User Value</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputUserValue"
+                  [value]="data?.userValue ? data?.userValue : null"
+                  placeholder=""
+                />
+              </div>
+          </div>
+          <div class="row form-row">
+            <div class="form-group col col-lg-6 mobile-support">
+              <label for="inputMobileSupport">Mobile Support</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputMobileSupport"
+                [value]="data?.mobileSupport ? data?.mobileSupport : null"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group col col-lg-6 server-type">
+              <label for="inputServerType">Server Type</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputServerType"
+                [value]="data?.serverType ? data?.serverType : null"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="row form-row">
+            <div class="form-group col col-lg-6 backup">
+              <label for="inputBackup">Backup</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputBackup"
+                [value]="data?.backup ? data?.backup : null"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group col col-lg-6 support">
+              <label for="inputSupport">Support</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputSupport"
+                [value]="data?.support ? data?.support : null"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="row form-row">
+            <div class="form-group col col-lg-6 fucntion">
+              <label for="inputFunction">Function</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputFunction"
+                [value]="data?.functionForConsumer ? data?.functionForConsumer : null"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group col col-lg-6 shipment-value">
+              <label for="inputShipmentValue">Shipment Value</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputShipmentValue"
+                [value]="data?.shipmentValue ? data?.shipmentValue : null"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="row form-row">
+            <div class="form-group col col-lg-6 cargo-list">
+              <label for="inputCargoList">Cargo List</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputCargoList"
+                [value]="data?.cargoList ? data?.cargoList : null"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group col col-lg-6 promotion">
+              <label for="inputPromotion">Promotion</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputPromotion"
+                [value]="data?.promotion ? data?.promotion : null"
+                placeholder=""
+              />
+            </div>
+          </div>
+          
+          <div class="row form-row end-button-group">
+            <div class="form-group col col-lg-6 submit-button">
+              <button class="btn btn-primary" type="submit" style="float: right">
+                submit
+              </button>
+            </div>
+            <div class="form-group col col-lg-6 reset-button">
+              <button class="btn btn-primary" type="reset">cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,100 @@
+<div class="detail-package-dialog-card">
+    <div class="card-header">
+      <span>{{ package?.packageName }}</span>
+    </div>
+    <div class="card-body">
+      <div class="row promotion">
+        <div class="col col-lg-12">
+          <a *ngIf="!package?.viewMode">฿</a>
+          <label [ngClass]="{ 'justify-text': package?.viewMode === true }">
+            {{ package?.promotion }}
+          </label>
+          <span *ngIf="!package?.viewMode"
+            >Bath/Day/Car
+            <p>or 360 Bath/Car/Month from normal 600 Bath</p>
+          </span>
+        </div>
+      </div>
+      <div class="row label-title system">
+        <div class="col col-lg-6">
+          <label>System</label>
+        </div>
+        <div class="col col-lg-6">
+          :<span> {{ package?.system }}</span>
+        </div>
+      </div>
+      <div class="row label-title function">
+        <div class="col col-lg-6">
+          <label>Function</label>
+        </div>
+        <div class="col col-lg-6">
+          :<span> {{ package?.functionForConsumer }}</span>
+        </div>
+      </div>
+      <div class="row label-title car-value">
+        <div class="col col-lg-6">
+          <label>Car Value</label>
+        </div>
+        <div class="col col-lg-6">
+          :<span> {{ package?.carValue }}</span>
+        </div>
+      </div>
+      <div class="row label-title user-value">
+        <div class="col col-lg-6">
+          <label>User Value</label>
+        </div>
+        <div class="col col-lg-6">
+          :<span> {{ package?.userValue }}</span>
+        </div>
+      </div>
+      <div class="row label-title shipment-value">
+        <div class="col col-lg-6">
+          <label>Shipment Value</label>
+        </div>
+        <div class="col col-lg-6">
+          :<span> {{ package?.shipmentValue }}</span>
+        </div>
+      </div>
+      <div class="row label-title cargo-list">
+        <div class="col col-lg-6">
+          <label>Cargo List</label>
+        </div>
+        <div class="col col-lg-6">
+          :<span> {{ package?.cargoList }}</span>
+        </div>
+      </div>
+      <div class="row label-title mobile">
+        <div class="col col-lg-6">
+          <label>Mobile</label>
+        </div>
+        <div class="col col-lg-6">
+          :<span> {{ package?.mobileSupport }}</span>
+        </div>
+      </div>
+      <div class="row label-title server-type">
+        <div class="col col-lg-6">
+          <label>Server</label>
+        </div>
+        <div class="col col-lg-6">
+          :<span> {{ package?.serverType }}</span>
+        </div>
+      </div>
+      <div class="row label-title backup">
+        <div class="col col-lg-6">
+          <label>Backup</label>
+        </div>
+        <div class="col col-lg-6">
+          :<span> {{ package?.backup }}</span>
+        </div>
+      </div>
+      <div class="row label-title support">
+        <div class="col col-lg-6">
+          <label>Support</label>
+        </div>
+        <div class="col col-lg-6">
+          :<span> {{ package?.support }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  

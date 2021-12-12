@@ -1,0 +1,112 @@
+<section class="package-main-page">
+    <div class="row">
+      <div class="col col-lg-4 mb-2">
+        <div class="nav-list">
+          <div class="subject">
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search Packages. . ." />
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-4 mb-2"></div>
+      <div class="col col-lg-4 mb-2">
+        <div class="button-toggle-list">
+          <ul class="nav-toggle">
+            <li class="subject-toggle">
+              <button type="button" class="btn button-add-data" (click)="onClickPackageAdd()">
+                + Add Data
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+        <div class="col col-lg-12">
+            <div class="package-content">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col col-lg-12 header-subject">
+                          Packages
+                      </div>
+                  </div>
+                  <div class="row form-row">
+                      <div class="form-group package-info-page">
+                          <table mat-table [dataSource]="dataSource">
+  
+                            <ng-container matColumnDef="packageName">
+                                <th mat-header-cell *matHeaderCellDef> Package Name </th>
+                                <td mat-cell *matCellDef="let element" class="first-data"><span class="first-data-on-table">
+                                    {{element.packageName}}</span>
+                                </td>
+                              </ng-container>
+                
+                              <ng-container matColumnDef="system">
+                                <th mat-header-cell *matHeaderCellDef> System </th>
+                                <td mat-cell *matCellDef="let element"> {{element.system}} </td>
+                              </ng-container>
+                
+                              <ng-container matColumnDef="carValue">
+                                <th mat-header-cell *matHeaderCellDef> Car Value </th>
+                                <td mat-cell *matCellDef="let element"> {{element.carValue}} </td>
+                              </ng-container>
+                
+                              <ng-container matColumnDef="userValue">
+                                <th mat-header-cell *matHeaderCellDef> User Value </th>
+                                <td mat-cell *matCellDef="let element"> {{element.userValue}} </td>
+                              </ng-container>
+                
+                              <ng-container matColumnDef="mobileSupport">
+                                <th mat-header-cell *matHeaderCellDef> Mobile </th>
+                                <td mat-cell *matCellDef="let element"> {{element.mobileSupport}} </td>
+                              </ng-container>
+                
+                              <ng-container matColumnDef="serverType">
+                                <th mat-header-cell *matHeaderCellDef> Server </th>
+                                <td mat-cell *matCellDef="let element"> {{element.serverType}} </td>
+                              </ng-container>
+                
+                              <ng-container matColumnDef="backup">
+                                <th mat-header-cell *matHeaderCellDef> Backup </th>
+                                <td mat-cell *matCellDef="let element"> {{element.backup}} </td>
+                              </ng-container>
+                
+                              <ng-container matColumnDef="support">
+                                <th mat-header-cell *matHeaderCellDef> Support </th>
+                                <td mat-cell *matCellDef="let element"> {{element.support}} </td>
+                              </ng-container>
+                
+                              <ng-container matColumnDef="action">
+                                <th mat-header-cell *matHeaderCellDef>
+                                </th>
+                
+                                <td mat-cell *matCellDef="let row; let i=index;">
+                                  <button type="button" class="btn" (click)="onClickPackageViewInfo(row.id)">
+                                      <i class='bx bx-show'></i>
+                                  </button>
+                
+                                  <button type="button" class="btn" (click)="onClickPackageEdit(row.id)">
+                                      <i class='bx bx-edit'></i>
+                                  </button>
+                
+                                  <button type="button" class="btn">
+                                      <i class='bx bx-trash'></i>
+                                  </button>
+                                </td>
+                              </ng-container>
+                
+                              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                            </table>
+                
+                            <mat-paginator [length]="dataSource.filteredData.length" [pageIndex]="0" [pageSize]="5"
+                              [pageSizeOptions]="[5, 10]"></mat-paginator>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
